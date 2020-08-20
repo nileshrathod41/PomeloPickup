@@ -1,0 +1,6 @@
+framework module Pods_PomeloPickUp {
+  umbrella header "Pods-PomeloPickUp-umbrella.h"
+
+  export *
+  module * { export * }
+}

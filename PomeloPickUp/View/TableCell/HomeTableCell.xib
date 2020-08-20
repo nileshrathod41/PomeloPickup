@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeTableCell" rowHeight="104" id="mJc-YV-gIb" customClass="HomeTableCell" customModule="PomeloPickUp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJc-YV-gIb" id="59P-nm-gQh">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIc-jM-5KZ">
+                        <rect key="frame" x="50" y="17" width="298" height="18.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTQ-ur-9IT">
+                        <rect key="frame" x="50" y="45.5" width="298" height="18.5"/>
+                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36R-PB-MHT">
+                        <rect key="frame" x="50" y="74" width="298" height="18.5"/>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99 km" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzJ-yE-RN7">
+                        <rect key="frame" x="356" y="10" width="48" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="3jQ-eg-SmK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Je-9P-x2W">
+                        <rect key="frame" x="10" y="42.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="6Tn-NP-GIT"/>
+                            <constraint firstAttribute="height" constant="25" id="dtz-kf-qez"/>
+                        </constraints>
+                        <state key="normal" image="uncheck"/>
+                        <state key="selected" image="checked"/>
+                        <connections>
+                            <action selector="btnSelectClicked:" destination="mJc-YV-gIb" eventType="touchUpInside" id="AOP-wE-nrk"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QTQ-ur-9IT" firstAttribute="leading" secondItem="yIc-jM-5KZ" secondAttribute="leading" id="3l5-lo-0eH"/>
+                    <constraint firstItem="QTQ-ur-9IT" firstAttribute="trailing" secondItem="yIc-jM-5KZ" secondAttribute="trailing" id="85t-4f-555"/>
+                    <constraint firstItem="4Je-9P-x2W" firstAttribute="centerY" secondItem="59P-nm-gQh" secondAttribute="centerY" id="dXV-5j-SsE"/>
+                    <constraint firstItem="mzJ-yE-RN7" firstAttribute="top" secondItem="59P-nm-gQh" secondAttribute="top" constant="10" id="fSJ-ZC-ntN"/>
+                    <constraint firstItem="yIc-jM-5KZ" firstAttribute="leading" secondItem="59P-nm-gQh" secondAttribute="leading" constant="50" id="h8M-HC-WcS"/>
+                    <constraint firstItem="mzJ-yE-RN7" firstAttribute="leading" secondItem="yIc-jM-5KZ" secondAttribute="trailing" constant="8" id="hHI-Xb-8ua"/>
+                    <constraint firstAttribute="bottom" secondItem="36R-PB-MHT" secondAttribute="bottom" constant="17.5" id="inp-AF-6Z2"/>
+                    <constraint firstItem="36R-PB-MHT" firstAttribute="leading" secondItem="QTQ-ur-9IT" secondAttribute="leading" id="n7v-M9-bHf"/>
+                    <constraint firstItem="yIc-jM-5KZ" firstAttribute="top" secondItem="59P-nm-gQh" secondAttribute="top" constant="17" id="nMP-n4-LdL"/>
+                    <constraint firstItem="36R-PB-MHT" firstAttribute="top" secondItem="QTQ-ur-9IT" secondAttribute="bottom" constant="10" id="nky-wV-mrt"/>
+                    <constraint firstAttribute="trailing" secondItem="mzJ-yE-RN7" secondAttribute="trailing" constant="10" id="oKC-pc-x0a"/>
+                    <constraint firstAttribute="bottom" secondItem="mzJ-yE-RN7" secondAttribute="bottom" constant="10" id="oPN-TY-2Wm"/>
+                    <constraint firstItem="4Je-9P-x2W" firstAttribute="leading" secondItem="59P-nm-gQh" secondAttribute="leading" constant="10" id="pny-dE-z1Z"/>
+                    <constraint firstItem="QTQ-ur-9IT" firstAttribute="top" secondItem="yIc-jM-5KZ" secondAttribute="bottom" constant="10" id="vx3-iN-Vzs"/>
+                    <constraint firstItem="36R-PB-MHT" firstAttribute="trailing" secondItem="QTQ-ur-9IT" secondAttribute="trailing" id="xbA-ai-IU5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnSelect" destination="4Je-9P-x2W" id="rsu-dv-EyQ"/>
+                <outlet property="lblAddress" destination="QTQ-ur-9IT" id="Du2-2e-RMu"/>
+                <outlet property="lblCity" destination="36R-PB-MHT" id="hst-7p-n9D"/>
+                <outlet property="lblDistance" destination="mzJ-yE-RN7" id="KdN-em-1ma"/>
+                <outlet property="lblDistanceWidth" destination="3jQ-eg-SmK" id="ew9-38-O7g"/>
+                <outlet property="lblName" destination="yIc-jM-5KZ" id="b9b-Q9-4Oe"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="-291.29464285714283"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checked" width="64" height="64"/>
+        <image name="uncheck" width="64" height="64"/>
+    </resources>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fnQ-uQ-5F8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pomelo Pick Up-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="PomeloPickUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="te6-Oa-7UD">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FCX-K6-Lbs"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Near By" id="7wa-UA-Wdi">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="btnNearByClicked:" destination="BYZ-38-t0r" id="kXB-q3-wTO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="has-1c-fat">
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1LM-Xp-ivt">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="84s-Ux-yZN"/>
+                                    <constraint firstAttribute="height" constant="20" id="UCD-aY-P9N"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="te6-Oa-7UD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0MU-h1-4MJ"/>
+                            <constraint firstItem="1LM-Xp-ivt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ve-lr-oTf"/>
+                            <constraint firstItem="te6-Oa-7UD" firstAttribute="top" secondItem="has-1c-fat" secondAttribute="bottom" id="6Dn-4u-kn6"/>
+                            <constraint firstItem="te6-Oa-7UD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GYR-ry-chA"/>
+                            <constraint firstItem="1LM-Xp-ivt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JtJ-LF-yqq"/>
+                            <constraint firstItem="has-1c-fat" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pmu-n9-1ig"/>
+                            <constraint firstItem="has-1c-fat" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d5z-91-4fY"/>
+                            <constraint firstItem="has-1c-fat" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ul8-WQ-R9Z"/>
+                            <constraint firstItem="te6-Oa-7UD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zmP-fa-tOH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pomelo Pick Up" id="g2q-Aw-9do"/>
+                    <connections>
+                        <outlet property="loader" destination="1LM-Xp-ivt" id="6zQ-DE-Jx1"/>
+                        <outlet property="tblView" destination="has-1c-fat" id="i8s-OL-NSv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hzv-QI-eCy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fnQ-uQ-5F8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AGj-F4-DWt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tj4-UC-i1K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTJ-Qh-kGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
